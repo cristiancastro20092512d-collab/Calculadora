@@ -1,0 +1,13 @@
+.Calculadora{
+    margin: 100px;
+    align-items: center;
+}
+
+.card{
+    height: 506px;
+    width: 204px;
+}
+
+body{
+    background: radial-gradient(to right, #8d8d8d, #505050);
+}
