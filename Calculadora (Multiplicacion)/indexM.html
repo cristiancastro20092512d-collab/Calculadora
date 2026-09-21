@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora</title>
-    <link rel="stylesheet" href="diseño.css">
-    <script src="codigo.js"></script>
+    <link rel="stylesheet" href="diseñoM.css">
+    <script src="codigoM.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 
-<body class="Padre bg-light d-flex justify-content-center align-items-center vh-100" style="background: linear-gradient(to right, rgb(0, 0, 0), rgb(213, 249, 255));">
+<body class="Padre bg-light d-flex justify-content-center align-items-center vh-100" style="background: linear-gradient(to right, rgb(0, 0, 0), rgb(146, 134, 255));">
 
     <div class="CajaPadre" style="display: flex;">
         <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark"
@@ -26,16 +26,16 @@
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Suma</a>
+                            <a class="nav-link" aria-current="page" href="../index.html">Suma</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="Calculadora (Resta)/indexR.html">Resta</a>
+                            <a class="nav-link" href="../Calculadora (Resta)/indexR.html">Resta</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="Calculadora (Multiplicacion)/indexM.html">Multiplicación</a>
+                            <a class="nav-link active" href="../Calculadora (Multiplicacion)/indexM.html">Multiplicación</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="Calculadora (Division)/indexD.html">División</a>
+                            <a class="nav-link" href="../Calculadora (Division)/indexD.html">División</a>
                         </li>
                     </ul>
                 </div>
@@ -87,8 +87,8 @@
                         <input onclick="agregarNumero('0')" type="button" id="Boton"
                             class="btn btn-dark border border-secondary text-white" value="0"
                             style="width: 60px; margin: 5px; height: 50px;">
-                        <input onclick="agregarNumero('+')" type="button"
-                            class="btn btn-dark border border-secondary text-white" value="+"
+                        <input onclick="agregarNumero('*')" type="button"
+                            class="btn btn-dark border border-secondary text-white" value="*"
                             style="width: 60px; margin: 5px; height: 50px;">
                         <input onclick="Calcular()" type="button"
                             class="btn btn-dark border border-secondary text-white" value="="
@@ -103,19 +103,18 @@
             </div>
         </center>
 
-        <div class="Suma" style="margin: 20px; border-radius: 8px; border: 1px solid black; padding: 20px; color: white;">
-            <h1>¿Que es la suma?</h1>
-            <p>La suma es una operación matemática que consiste en agregar dos o más números para obtener su total.
+        <div class="Multiplicacion" style="margin: 20px; border-radius: 8px; border: 1px solid black; padding: 20px; color: white;">
+            <h1>¿Que es la multiplicación?</h1>
+            <p>La multiplicación es una operación matemática que consiste en agregar un número a sí mismo varias veces.
             </p>
             <p>
-                Representada formalmente por el signo más (+), esta operación conceptualiza la acción de juntar
-                colecciones de objetos homogéneos o de avanzar de manera sucesiva en la recta numérica. A un nivel
-                profundo y axiomático, se define rigurosamente en la teoría de conjuntos como la cardinalidad de la
-                unión de conjuntos disjuntos, constituyendo la base del proceso de contar.
+                La multiplicación es una operación aritmética que consiste en sumar un número tantas veces como lo
+                indica otro número.Es una forma abreviada de realizar una suma repetida de sumandos iguales. Por
+                ejemplo, en vez de sumar 4 + 4 + 4, se multiplica 4 * 3
             </p>
             <div class="Imagenes">
-                <center><img src="https://thumbs.dreamstime.com/b/la-adici%C3%B3n-suma-el-icono-100517740.jpg"
-                        alt="Suma" style="width: 150px; height: 150px;"></center>
+                <center><img src="https://matematicas-para-la-vida.blog/wp-content/uploads/2018/01/captura-de-pantalla-2022-04-19-a-las-14.22.49.png?w=572"
+                        alt="Multiplicación" style="width: 150px; height: 150px;"></center>
             </div>
         </div>
     </div>
