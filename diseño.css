@@ -3,6 +3,12 @@
     align-items: center;
 }
 
+.CajaPadre{
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
 .card{
     height: 506px;
     width: 204px;

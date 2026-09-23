@@ -11,11 +11,13 @@
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 
-<body class="Padre bg-light d-flex justify-content-center align-items-center vh-100" style="background: linear-gradient(to right, rgb(0, 0, 0), rgb(255, 249, 169));">
+<body class="Padre bg-light py-5"
+    style="background: linear-gradient(to right, rgb(0, 0, 0), rgb(138, 136, 255)); min-height: 100vh;">
 
-    <div class="CajaPadre" style="display: flex;">
-        <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark"
-            style="margin-bottom: 20px; margin: 20px; border-radius: 8px;">
+    <div class="CajaPadre d-flex flex-column align-items-center w-100 container">
+
+        <nav class="navbar bg-dark border-bottom border-body shadow mb-4" data-bs-theme="dark"
+            style="width: 20rem; border-radius: 8px; position: relative; z-index: 1000; margin-top: 10px;">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">Calculadora</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -23,7 +25,8 @@
                     aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <div class="collapse navbar-collapse bg-dark p-2 mt-2 border border-secondary rounded"
+                    id="navbarNavDropdown">
                     <ul class="navbar-nav">
                         <li class="nav-item">
                             <a class="nav-link" aria-current="page" href="../index.html">Suma</a>
@@ -32,7 +35,8 @@
                             <a class="nav-link" href="../Calculadora (Resta)/indexR.html">Resta</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../Calculadora (Multiplicacion)/indexM.html">Multiplicación</a>
+                            <a class="nav-link"
+                                href="../Calculadora (Multiplicacion)/indexM.html">Multiplicación</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active" href="../Calculadora (Division)/indexD.html">División</a>
@@ -42,81 +46,86 @@
             </div>
         </nav>
 
-        <center>
-            <div class="Calculadora">
-                <div class="card shadow bg-dark border-secondary" style="width: 20rem;">
-                    <div class="card-body d-flex justify-content-center align-items-center" style="height: 70px;">
-                        <input id="PANTALLA" type="text"
-                            class="form-control text-center fs-4 bg-black text-white border-secondary" placeholder="0"
-                            style="color: white;">
-                    </div>
-                    <div class="card-buttoms-fila1 text-center">
-                        <input onclick="agregarNumero('1')" type="button"
-                            class="btn btn-dark border border-secondary text-white" value="1"
-                            style="width: 60px; margin: 5px; height: 50px;">
-                        <input onclick="agregarNumero('2')" type="button"
-                            class="btn btn-dark border border-secondary text-white" value="2"
-                            style="width: 60px; margin: 5px; height: 50px;">
-                        <input onclick="agregarNumero('3')" type="button"
-                            class="btn btn-dark border border-secondary text-white" value="3"
-                            style="width: 60px; margin: 5px; height: 50px;">
-                    </div>
-                    <div class="card-buttoms-fila2 text-center">
-                        <input onclick="agregarNumero('4')" type="button"
-                            class="btn btn-dark border border-secondary text-white" value="4"
-                            style="width: 60px; margin: 5px; height: 50px;">
-                        <input onclick="agregarNumero('5')" type="button"
-                            class="btn btn-dark border border-secondary text-white" value="5"
-                            style="width: 60px; margin: 5px; height: 50px;">
-                        <input onclick="agregarNumero('6')" type="button"
-                            class="btn btn-dark border border-secondary text-white" value="6"
-                            style="width: 60px; margin: 5px; height: 50px;">
-                    </div>
-                    <div class="card-buttoms-fila3 text-center">
-                        <input onclick="agregarNumero('7')" type="button"
-                            class="btn btn-dark border border-secondary text-white" value="7"
-                            style="width: 60px; margin: 5px; height: 50px;">
-                        <input onclick="agregarNumero('8')" type="button"
-                            class="btn btn-dark border border-secondary text-white" value="8"
-                            style="width: 60px; margin: 5px; height: 50px;">
-                        <input onclick="agregarNumero('9')" type="button"
-                            class="btn btn-dark border border-secondary text-white" value="9"
-                            style="width: 60px; margin: 5px; height: 50px;">
-                    </div>
-                    <div class="card-buttoms-fila4 text-center mb-3">
-                        <input onclick="agregarNumero('0')" type="button" id="Boton"
-                            class="btn btn-dark border border-secondary text-white" value="0"
-                            style="width: 60px; margin: 5px; height: 50px;">
-                        <input onclick="agregarNumero('/')" type="button"
-                            class="btn btn-dark border border-secondary text-white" value="/"
-                            style="width: 60px; margin: 5px; height: 50px;">
-                        <input onclick="Calcular()" type="button"
-                            class="btn btn-dark border border-secondary text-white" value="="
-                            style="width: 60px; margin: 5px; height: 50px;">
-                    </div>
-                    <div class="card-buttoms-fila4 text-center mb-3">
-                        <input onclick="Eliminar()" type="button" id="Boton"
-                            class="btn btn-dark border border-secondary text-white" value="X"
-                            style="width: 60px; margin: 5px; height: 50px;">
-                    </div>
+        <div class="Calculadora mb-4">
+            <div class="card shadow bg-dark border-secondary" style="width: 20rem;">
+                <div class="card-body d-flex justify-content-center align-items-center" style="height: 70px;">
+                    <input id="PANTALLA" type="text"
+                        class="form-control text-center fs-4 bg-black text-white border-secondary" placeholder="0"
+                        style="color: white;">
+                </div>
+                <div class="card-buttoms-fila1 text-center">
+                    <input onclick="agregarNumero('1')" type="button"
+                        class="btn btn-dark border border-secondary text-white" value="1"
+                        style="width: 60px; margin: 5px; height: 50px;">
+                    <input onclick="agregarNumero('2')" type="button"
+                        class="btn btn-dark border border-secondary text-white" value="2"
+                        style="width: 60px; margin: 5px; height: 50px;">
+                    <input onclick="agregarNumero('3')" type="button"
+                        class="btn btn-dark border border-secondary text-white" value="3"
+                        style="width: 60px; margin: 5px; height: 50px;">
+                </div>
+                <div class="card-buttoms-fila2 text-center">
+                    <input onclick="agregarNumero('4')" type="button"
+                        class="btn btn-dark border border-secondary text-white" value="4"
+                        style="width: 60px; margin: 5px; height: 50px;">
+                    <input onclick="agregarNumero('5')" type="button"
+                        class="btn btn-dark border border-secondary text-white" value="5"
+                        style="width: 60px; margin: 5px; height: 50px;">
+                    <input onclick="agregarNumero('6')" type="button"
+                        class="btn btn-dark border border-secondary text-white" value="6"
+                        style="width: 60px; margin: 5px; height: 50px;">
+                </div>
+                <div class="card-buttoms-fila3 text-center">
+                    <input onclick="agregarNumero('7')" type="button"
+                        class="btn btn-dark border border-secondary text-white" value="7"
+                        style="width: 60px; margin: 5px; height: 50px;">
+                    <input onclick="agregarNumero('8')" type="button"
+                        class="btn btn-dark border border-secondary text-white" value="8"
+                        style="width: 60px; margin: 5px; height: 50px;">
+                    <input onclick="agregarNumero('9')" type="button"
+                        class="btn btn-dark border border-secondary text-white" value="9"
+                        style="width: 60px; margin: 5px; height: 50px;">
+                </div>
+                <div class="card-buttoms-fila4 text-center mb-3">
+                    <input onclick="agregarNumero('0')" type="button" id="Boton"
+                        class="btn btn-dark border border-secondary text-white" value="0"
+                        style="width: 60px; margin: 5px; height: 50px;">
+                    <input onclick="agregarNumero('/')" type="button"
+                        class="btn btn-dark border border-secondary text-white" value="/"
+                        style="width: 60px; margin: 5px; height: 50px;">
+                    <input onclick="Calcular()" type="button" class="btn btn-dark border border-secondary text-white"
+                        value="=" style="width: 60px; margin: 5px; height: 50px;">
+                </div>
+                <div class="card-buttoms-fila4 text-center mb-3">
+                    <input onclick="Eliminar()" type="button" id="Boton"
+                        class="btn btn-dark border border-secondary text-white" value="X"
+                        style="width: 60px; margin: 5px; height: 50px;">
                 </div>
             </div>
-        </center>
+        </div>
 
-        <div class="Division" style="margin: 20px; border-radius: 8px; border: 1px solid black; padding: 20px; color: white;">
+        <div class="Multiplicacion mb-4"
+            style="margin: 20px; border-radius: 8px; border: 1px solid black; padding: 20px; color: white; max-width: 900px; width: 100%;">
             <h1>¿Que es la división?</h1>
-            <p>La división es una operación matemática que consiste en repartir una cantidad en partes iguales.
-            </p>
+            <p>La división es una operación matemática que consiste en repartir un número en partes iguales.</p>
             <p>
-                Representada formalmente por el signo de división (÷), esta operación conceptualiza la acción de repartir
-                una cantidad en partes iguales. A un nivel profundo y axiomático, se define rigurosamente en la teoría de conjuntos
-                como la cardinalidad de la unión de conjuntos disjuntos, constituyendo la base del proceso de contar.
+                Representada formalmente por el signo de la división (÷), la división es una operación matemática que
+                consiste en repartir un número en partes iguales. Es una forma de distribuir una cantidad en grupos
+                iguales.
             </p>
-            <p>Es la operación inversa de la multiplicación.</p>
-            <div class="Imagenes">
-                <center><img src="https://s1.significados.com/foto/partes-de-la-division.jpg?class=article"
-                        alt="División" style="width: 120px; height: 150px;"></center>
+            <div class="Imagenes text-center">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaWKkhtnINitOlucvorL7ZXOBM-3i8X5yB5DXp6CUugk6njla5oJv5zSUG&s=10" alt="División"
+                    style="width: 150px; height: 150px;">
             </div>
+
+            <center><video src="https://youtu.be/oF-rZLIShC8" controls style="margin: 10px;"></video></center>
+        </div>
+
+        <hr class="W-100" style="max-width: 600px;">
+
+        <div class="alert alert-primary mb-4" role="alert" style="max-width: 900px; width: 100%;">
+            Bibliografia: <a href="https://www.mathnasium.com/math-centers/rollinghillsestates/news/division-in-math" class="alert-link">Detalles de
+                la división</a>. manejo de la división y ¿Que es la división?.
         </div>
     </div>
 
